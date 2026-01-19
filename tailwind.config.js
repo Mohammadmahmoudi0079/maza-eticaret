@@ -13,23 +13,10 @@ export default {
       container:{
         center:true,
         padding:{
-          default:"1rem",
+          DEFAULT:"1rem",
           sm:'3rem',
-          lg:'4rem',
-          xl:'5rem',
-          '2xl':'6rem'
         }
       },
-      container2:{
-        center:false,
-        padding:{
-          default:"1rem",
-          sm:'3rem',
-          lg:'4rem',
-          xl:'5rem',
-          '2xl':'6rem'
-        }
-      }
     },
   },
   plugins: [],

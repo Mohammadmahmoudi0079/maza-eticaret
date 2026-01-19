@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Slider from 'react-slick'
 import image1 from '../../assets/Hero/headphone.png'
 import image2 from '../../assets/Hero/watch.png'
+import image3 from '../../assets/Hero/macbook.png'
 import Button from '../Shared/Button'
 
 const HeroData = [
@@ -18,6 +19,13 @@ const HeroData = [
         subtitle: "i-watch",
         title: "smart watch",
         title2: "watch",
+    },
+    {
+        id: 3,
+        img: image3,
+        subtitle: "Apple",
+        title: "Macbook",
+        title2: "Laptop",
     },
 ]
 

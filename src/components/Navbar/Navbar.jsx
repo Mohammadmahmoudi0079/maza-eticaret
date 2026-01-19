@@ -1,5 +1,6 @@
 import React from 'react'
 import {IoMdSearch} from 'react-icons/io'
+import { Link } from 'react-router-dom';
 import { FaCaretDown, FaShoppingCart } from "react-icons/fa";
 import DarkMode from './DarkMode';
 
@@ -7,17 +8,17 @@ const MenuLinks =[
   {
     id: 1 ,
     name:  "Home",
-    link: "/#"
+    link: "/"
   },
   {
     id: 2 ,
     name:  "Shop",
-    link: "/#shop"
+    link: "/shop"
   },
   {
     id: 3 ,
     name:  "About",
-    link: "/#about"
+    link: "/about"
   },
   {
     id: 4 ,
@@ -55,9 +56,11 @@ function Navbar() {
                 {
                   MenuLinks.map((data,index)=>(
                   <li className='mt-2' key={index}>
-                    <a href={data.link}
-                    className='inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200'
-                    >{data.name}</a>
+                     <Link
+                        to={data.link}
+                        className="inline-block px-4 font-semibold text-gray-500 hover:text-black dark:hover:text-white duration-200">
+                        {data.name}
+                      </Link>
                   </li>
                   ))}
                   {/* Dropdown menu */}
@@ -75,7 +78,7 @@ function Navbar() {
                       <ul className='space-y-2'>
                         {
                           DropDownLinks.map((data,index)=>(
-                            <li>
+                            <li key={index}>
                               <a 
                               className='text-gray-500 hover:text-black dark:hover:text-white 
                               duration-200 inline-block w-full p-2  hover:bg-purple/20 rounded-md font-semibold'
